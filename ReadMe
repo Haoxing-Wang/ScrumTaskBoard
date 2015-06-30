@@ -1,0 +1,40 @@
+BEFORE RUNNING THE CODE
+
+This solution was completed using Java with Eclipse (JDK 1.8), there is one more step needed in order to run the code.
+
+1. Import the folder taskBoardProject to your Eclipse, by importing the existing projects to workspace
+
+2. In terms of the second step, in Eclipse, you need to find the file ExecuteOption.java under src folder, and change the line 52.
+
+	Since the XMLFile is used to save all the changes made, therefore, its location needs to be changed accordingly.
+	
+	In my case, I save it to /Users/haoxingwang/Documents
+
+	You have to change this path in order to successfully create an XML file and save all the changes.
+
+	For example, XMLFile = new File(c:\\test\\file.xml) in Windows
+
+
+RUNNING THE CODE
+
+1. In terminal, change your working directory to bin folder under folder taskBoardProject
+	
+	In my case the working directory would be /Users/haoxingwang/Documents/workspace/taskBoardProject/bin
+
+2. Run the code using commands required in this assessment (create, list, delete, move, update and complete):
+	
+	java taskBoard.Main -create -story 1 'this is my first user story'
+
+	or
+
+	java taskBoard.Main -list -stories
+
+	and etc.
+
+3. If it throws "Error: Could not find or load main class taskBoard.Main"
+
+	then, it is necessary to add the project to classpath.
+
+	In my case, as my working directory is /Users/haoxingwang/Documents/workspace/taskBoardProject/bin
+
+	So that's export CLASSPATH=/Users/haoxingwang/Documents/workspace/taskBoardProject/bin:$CLASSPATH and run the command again
